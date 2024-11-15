@@ -61,3 +61,19 @@ Para más detalles, consulta: [Guía de Usuario](./Guía-de-Usuario.md).
 - **Infraestructura:** Docker y AWS
 
 ### Diagrama de Arquitectura
+[Usuario] <---> [Frontend (React.js)] <---> [API (Node.js)] <---> [Base de datos (PostgreSQL)] | |
+v v
+[Docker] [AWS]
+
+
+Más detalles en la página: [Arquitectura del Proyecto](./Arquitectura-del-Proyecto.md).
+
+---
+
+## 🤝 Guía para Contribuidores
+1. Haz un fork del repositorio.
+2. Clona el proyecto en tu máquina local:
+   ```bash
+   git clone https://github.com/tu-usuario/tu-repositorio.git
+
+
