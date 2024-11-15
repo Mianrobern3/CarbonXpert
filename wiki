@@ -1,0 +1,63 @@
+# 🌍 Bienvenido al Wiki de CarbonXpert
+
+CarbonXpert es una plataforma diseñada para medir y reducir la huella de carbono en comunidades residenciales mediante el monitoreo en tiempo real del consumo de recursos, alertas personalizadas y recomendaciones prácticas.
+
+## 📚 Índice del Wiki
+1. [Introducción](./Introducción.md)
+2. [Objetivos del Proyecto](./Objetivos-del-Proyecto.md)
+3. [Guía de Usuario](./Guía-de-Usuario.md)
+   - [Registro y Configuración](./Guía-de-Usuario.md#registro-y-configuración)
+   - [Visualización de Consumo](./Guía-de-Usuario.md#visualización-de-consumo)
+   - [Alertas y Recomendaciones](./Guía-de-Usuario.md#alertas-y-recomendaciones)
+4. [Arquitectura del Proyecto](./Arquitectura-del-Proyecto.md)
+   - [Tecnologías Usadas](./Arquitectura-del-Proyecto.md#tecnologías-usadas)
+   - [Diagrama de Arquitectura](./Arquitectura-del-Proyecto.md#diagrama-de-arquitectura)
+5. [Guía para Contribuidores](./Guía-para-Contribuidores.md)
+6. [Preguntas Frecuentes](./Preguntas-Frecuentes.md)
+7. [Licencia](./Licencia.md)
+
+---
+
+## 📖 Introducción
+CarbonXpert es una solución tecnológica avanzada que tiene como objetivo ayudar a comunidades residenciales a reducir su huella de carbono. Proporciona herramientas como monitoreo en tiempo real, alertas de consumo y recomendaciones personalizadas para fomentar prácticas sostenibles.
+
+Para más detalles, visita la página dedicada: [Introducción](./Introducción.md).
+
+---
+
+## 🎯 Objetivos del Proyecto
+- Facilitar el monitoreo en tiempo real del consumo de recursos.
+- Reducir la huella de carbono mediante recomendaciones personalizadas.
+- Incentivar el consumo responsable con recompensas sostenibles.
+- Promover comunidades conscientes del impacto ambiental.
+
+---
+
+## 🛠️ Guía de Usuario
+
+### **Registro y Configuración**
+1. Crea tu cuenta en el sitio web.
+2. Completa el formulario con tus datos personales.
+3. Configura tu perfil añadiendo información sobre tu vivienda y hábitos de consumo.
+
+### **Visualización de Consumo**
+1. Consulta gráficos diarios, semanales y mensuales.
+2. Filtra los datos por tipo de recurso (electricidad, agua, gas).
+
+### **Alertas y Recomendaciones**
+- Recibe notificaciones sobre consumo excesivo.
+- Implementa recomendaciones personalizadas para reducir tu impacto ambiental.
+
+Para más detalles, consulta: [Guía de Usuario](./Guía-de-Usuario.md).
+
+---
+
+## 🏗️ Arquitectura del Proyecto
+
+### Tecnologías Usadas
+- **Frontend:** React.js
+- **Backend:** Node.js
+- **Base de datos:** PostgreSQL
+- **Infraestructura:** Docker y AWS
+
+### Diagrama de Arquitectura
