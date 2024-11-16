@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - CarbonXpert</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="login-body">
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="CarbonXpert" class="logo">
+                <h2>Iniciar Sesión</h2>
+            </div>
+
+            <div class="user-type-selector">
+                <button type="button" class="type-btn active" data-type="residential">
+                    <i class="fas fa-home"></i>
+                    Residencial
+                </button>
+                <button type="button" class="type-btn" data-type="enterprise">
+                    <i class="fas fa-building"></i>
+                    Empresarial
+                </button>
+            </div>
+
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="email">
+                        <i class="fas fa-envelope"></i>
+                        Email
+                    </label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">
+                        <i class="fas fa-lock"></i>
+                        Contraseña
+                    </label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <span>Ingresar</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+
+            <div class="login-footer">
+                <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+                <p>¿No tienes cuenta? <a href="{{ url_for('registro_residencial') }}" id="registerLink">Regístrate aquí</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
+</body>
+</html> 

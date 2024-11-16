@@ -1,0 +1,679 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nombre": "Juan Pérez",
+      "email": "juan@ejemplo.com",
+      "vivienda": {
+        "tamaño": 120,
+        "habitantes": 4,
+        "ciudad": "Santiago"
+      },
+      "lineaBase": {
+        "electricidad": 450,
+        "agua": 10,
+        "gas": 20
+      },
+      "consumos": {
+        "electricidad": {
+          "datos": [
+            450,
+            480,
+            520,
+            490,
+            510,
+            530
+          ],
+          "meses": [
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio"
+          ]
+        },
+        "agua": {
+          "datos": [
+            10,
+            12,
+            11,
+            13,
+            12,
+            14
+          ],
+          "meses": [
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio"
+          ]
+        },
+        "gas": {
+          "datos": [
+            20,
+            22,
+            25,
+            23,
+            24,
+            26
+          ],
+          "meses": [
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio"
+          ]
+        }
+      },
+      "huellaCarbono": {
+        "datos": [
+          1200,
+          1250,
+          1300,
+          1280,
+          1290,
+          1310
+        ],
+        "meses": [
+          "Enero",
+          "Febrero",
+          "Marzo",
+          "Abril",
+          "Mayo",
+          "Junio"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "nombre": "Juan Pérez",
+      "email": "juan@ejemplo.com",
+      "ciudad": "Medellín",
+      "vivienda": {
+        "tamaño": 100,
+        "habitantes": 4
+      },
+      "lineaBase": {
+        "electricidad": 300,
+        "agua": 10,
+        "gas": 20
+      },
+      "consumos": {
+        "electricidad": {
+          "datos": [
+            291,
+            289,
+            298,
+            283,
+            279,
+            313
+          ],
+          "meses": [
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio"
+          ]
+        },
+        "agua": {
+          "datos": [
+            9,
+            9,
+            11,
+            9,
+            10,
+            8
+          ],
+          "meses": [
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio"
+          ]
+        },
+        "gas": {
+          "datos": [
+            19,
+            23,
+            19,
+            21,
+            20,
+            18
+          ],
+          "meses": [
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio"
+          ]
+        }
+      },
+      "huellaCarbono": {
+        "datos": [
+          186,
+          193,
+          190,
+          186,
+          182,
+          195
+        ],
+        "meses": [
+          "Enero",
+          "Febrero",
+          "Marzo",
+          "Abril",
+          "Mayo",
+          "Junio"
+        ]
+      },
+      "fechaRegistro": "2024-11-15 18:12:47"
+    },
+    {
+      "id": 3,
+      "nombre": "Juan Pérez",
+      "email": "juan@ejemplo.com",
+      "ciudad": "Bogotá",
+      "vivienda": {
+        "tamaño": 100,
+        "habitantes": 4
+      },
+      "lineaBase": {
+        "electricidad": 300,
+        "agua": 10,
+        "gas": 20
+      },
+      "consumos": {
+        "electricidad": {
+          "datos": [
+            307,
+            305,
+            251,
+            321,
+            300,
+            328
+          ],
+          "meses": [
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio"
+          ]
+        },
+        "agua": {
+          "datos": [
+            11,
+            9,
+            11,
+            10,
+            11,
+            8
+          ],
+          "meses": [
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio"
+          ]
+        },
+        "gas": {
+          "datos": [
+            21,
+            23,
+            23,
+            22,
+            21,
+            18
+          ],
+          "meses": [
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio"
+          ]
+        }
+      },
+      "huellaCarbono": {
+        "datos": [
+          230,
+          232,
+          200,
+          240,
+          225,
+          235
+        ],
+        "meses": [
+          "Enero",
+          "Febrero",
+          "Marzo",
+          "Abril",
+          "Mayo",
+          "Junio"
+        ]
+      },
+      "fechaRegistro": "2024-11-15 18:18:42"
+    },
+    {
+      "id": 4,
+      "nombre": "Juan Pérez",
+      "email": "juan@ejemplo.com",
+      "ciudad": "Bogotá",
+      "vivienda": {
+        "tamaño": 100,
+        "habitantes": 4
+      },
+      "lineaBase": {
+        "electricidad": 300,
+        "agua": 10,
+        "gas": 20
+      },
+      "consumos": {
+        "electricidad": {
+          "datos": [
+            305,
+            284,
+            292,
+            292,
+            276,
+            337
+          ],
+          "meses": [
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio"
+          ]
+        },
+        "agua": {
+          "datos": [
+            11,
+            11,
+            9,
+            10,
+            12,
+            8
+          ],
+          "meses": [
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio"
+          ]
+        },
+        "gas": {
+          "datos": [
+            19,
+            21,
+            19,
+            22,
+            17,
+            21
+          ],
+          "meses": [
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio"
+          ]
+        }
+      },
+      "huellaCarbono": {
+        "datos": [
+          224,
+          216,
+          216,
+          222,
+          203,
+          247
+        ],
+        "meses": [
+          "Enero",
+          "Febrero",
+          "Marzo",
+          "Abril",
+          "Mayo",
+          "Junio"
+        ]
+      },
+      "fechaRegistro": "2024-11-15 18:19:52"
+    },
+    {
+      "id": 5,
+      "nombre": "Juan Pérez",
+      "email": "juan@ejemplo.com",
+      "ciudad": "Barranquilla",
+      "vivienda": "apartamento",
+      "lineaBase": {
+        "electricidad": 4,
+        "agua": 300,
+        "gas": 10
+      },
+      "consumos": {
+        "electricidad": {
+          "datos": [
+            4.34,
+            4.37,
+            4.56,
+            4.77,
+            4.39,
+            3.26,
+            4.22,
+            3.89,
+            3.94,
+            3.21,
+            4.13,
+            4.0
+          ],
+          "meses": [
+            "Ene",
+            "Feb",
+            "Mar",
+            "Abr",
+            "May",
+            "Jun",
+            "Jul",
+            "Ago",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dic"
+          ]
+        },
+        "agua": {
+          "datos": [
+            352.92,
+            349.76,
+            282.89,
+            317.06,
+            273.63,
+            241.64,
+            293.41,
+            322.11,
+            261.77,
+            282.66,
+            325.66,
+            272.83
+          ],
+          "meses": [
+            "Ene",
+            "Feb",
+            "Mar",
+            "Abr",
+            "May",
+            "Jun",
+            "Jul",
+            "Ago",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dic"
+          ]
+        },
+        "gas": {
+          "datos": [
+            10.47,
+            8.84,
+            11.82,
+            9.23,
+            11.46,
+            11.84,
+            8.94,
+            8.77,
+            10.01,
+            9.48,
+            10.63,
+            8.27
+          ],
+          "meses": [
+            "Ene",
+            "Feb",
+            "Mar",
+            "Abr",
+            "May",
+            "Jun",
+            "Jul",
+            "Ago",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dic"
+          ]
+        }
+      },
+      "huellaCarbono": {
+        "datos": [
+          129.64,
+          125.45,
+          111.47,
+          116.68,
+          107.86,
+          98.29,
+          108.65,
+          116.7,
+          101.11,
+          105.84,
+          121.64,
+          100.99
+        ],
+        "meses": [
+          "Ene",
+          "Feb",
+          "Mar",
+          "Abr",
+          "May",
+          "Jun",
+          "Jul",
+          "Ago",
+          "Sep",
+          "Oct",
+          "Nov",
+          "Dic"
+        ]
+      },
+      "alertas": [],
+      "recomendaciones": [
+        {
+          "tipo": "ahorro",
+          "mensaje": "Cambia a iluminación LED para reducir el consumo eléctrico",
+          "icono": "fa-lightbulb"
+        },
+        {
+          "tipo": "ahorro",
+          "mensaje": "Instala aireadores en grifos para reducir el consumo de agua",
+          "icono": "fa-tint"
+        },
+        {
+          "tipo": "eficiencia",
+          "mensaje": "Revisa el aislamiento de ventanas y puertas",
+          "icono": "fa-home"
+        },
+        {
+          "tipo": "climatizacion",
+          "mensaje": "Mantén el aire acondicionado a 24°C para optimizar el consumo",
+          "icono": "fa-snowflake"
+        }
+      ],
+      "fechaRegistro": "2024-11-15 18:46:21"
+    },
+    {
+      "id": 6,
+      "nombre": "Juan Pérez",
+      "email": "juan@ejemplo.com",
+      "ciudad": "Cartagena",
+      "vivienda": "apartamento",
+      "lineaBase": {
+        "electricidad": 200,
+        "agua": 10,
+        "gas": 20
+      },
+      "consumos": {
+        "electricidad": {
+          "datos": [
+            181.32,
+            196.93,
+            196.62,
+            195.71,
+            163.08,
+            213.64,
+            215.07,
+            232.08,
+            237.59,
+            198.13,
+            227.67,
+            204.55
+          ],
+          "meses": [
+            "Ene",
+            "Feb",
+            "Mar",
+            "Abr",
+            "May",
+            "Jun",
+            "Jul",
+            "Ago",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dic"
+          ]
+        },
+        "agua": {
+          "datos": [
+            11.33,
+            10.68,
+            8.49,
+            8.75,
+            10.72,
+            9.23,
+            10.1,
+            8.69,
+            11.66,
+            9.57,
+            9.08,
+            9.86
+          ],
+          "meses": [
+            "Ene",
+            "Feb",
+            "Mar",
+            "Abr",
+            "May",
+            "Jun",
+            "Jul",
+            "Ago",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dic"
+          ]
+        },
+        "gas": {
+          "datos": [
+            17.61,
+            17.99,
+            22.79,
+            21.88,
+            18.56,
+            17.41,
+            23.94,
+            21.98,
+            20.65,
+            18.91,
+            18.85,
+            18.4
+          ],
+          "meses": [
+            "Ene",
+            "Feb",
+            "Mar",
+            "Abr",
+            "May",
+            "Jun",
+            "Jul",
+            "Ago",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dic"
+          ]
+        }
+      },
+      "huellaCarbono": {
+        "datos": [
+          156.48,
+          167.19,
+          175.93,
+          173.6,
+          146.34,
+          176.45,
+          190.71,
+          197.42,
+          199.23,
+          169.48,
+          188.41,
+          172.72
+        ],
+        "meses": [
+          "Ene",
+          "Feb",
+          "Mar",
+          "Abr",
+          "May",
+          "Jun",
+          "Jul",
+          "Ago",
+          "Sep",
+          "Oct",
+          "Nov",
+          "Dic"
+        ]
+      },
+      "alertas": [],
+      "recomendaciones": [
+        {
+          "tipo": "ahorro",
+          "mensaje": "Cambia a iluminación LED para reducir el consumo eléctrico",
+          "icono": "fa-lightbulb"
+        },
+        {
+          "tipo": "ahorro",
+          "mensaje": "Instala aireadores en grifos para reducir el consumo de agua",
+          "icono": "fa-tint"
+        },
+        {
+          "tipo": "eficiencia",
+          "mensaje": "Revisa el aislamiento de ventanas y puertas",
+          "icono": "fa-home"
+        },
+        {
+          "tipo": "climatizacion",
+          "mensaje": "Mantén el aire acondicionado a 24°C para optimizar el consumo",
+          "icono": "fa-snowflake"
+        }
+      ],
+      "fechaRegistro": "2024-11-15 18:56:32"
+    }
+  ]
+}

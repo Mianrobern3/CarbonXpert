@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarbonXpert Enterprise - Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard_empresarial.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://bernii.github.io/gauge.js/dist/gauge.min.js"></script>
+</head>
+<body class="dashboard-body">
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="CarbonXpert" class="logo">
+                <h2>CarbonXpert Enterprise</h2>
+            </div>
+            
+            <div class="user-info">
+                <div class="user-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="user-details">
+                    <h3 id="userName">Cargando...</h3>
+                    <p id="userCompany">Cargando...</p>
+                </div>
+            </div>
+
+            <ul class="nav-links">
+                <li class="active" data-view="dashboard">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </li>
+                <li data-view="buildings">
+                    <i class="fas fa-building"></i>
+                    <span>Edificios</span>
+                </li>
+                <li data-view="reports">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Reportes</span>
+                </li>
+                <li data-view="settings">
+                    <i class="fas fa-cog"></i>
+                    <span>Configuración</span>
+                </li>
+                <li onclick="cerrarSesion()">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Cerrar Sesión</span>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <header class="main-header">
+                <div class="header-content">
+                    <h1>Dashboard Empresarial</h1>
+                    <p id="fechaActual" class="fecha"></p>
+                </div>
+                <div class="header-actions">
+                    <button class="action-btn" onclick="exportarDatos()">
+                        <i class="fas fa-download"></i>
+                        Exportar Datos
+                    </button>
+                    <button class="action-btn" onclick="generarReporte()">
+                        <i class="fas fa-file-pdf"></i>
+                        Generar Reporte
+                    </button>
+                </div>
+            </header>
+
+            <!-- Vista Principal del Dashboard -->
+            <div id="dashboardView" class="view-content active">
+                <div class="dashboard-grid">
+                    <!-- Resumen General -->
+                    <div class="dashboard-card summary-card">
+                        <div class="card-header">
+                            <h3>Resumen General</h3>
+                            <span class="period-selector">
+                                <select id="periodSelector" onchange="actualizarDatos()">
+                                    <option value="month">Este Mes</option>
+                                    <option value="quarter">Este Trimestre</option>
+                                    <option value="year">Este Año</option>
+                                </select>
+                            </span>
+                        </div>
+                        <div class="card-content">
+                            <div class="summary-stats">
+                                <div class="stat-item">
+                                    <i class="fas fa-building"></i>
+                                    <span class="stat-value" id="totalBuildings">0</span>
+                                    <span class="stat-label">Edificios</span>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="fas fa-leaf"></i>
+                                    <span class="stat-value" id="totalCarbon">0</span>
+                                    <span class="stat-label">Ton CO₂eq</span>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <span class="stat-value" id="totalSavings">0</span>
+                                    <span class="stat-label">Ahorro</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Huella de Carbono -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>Huella de Carbono por Edificio</h3>
+                        </div>
+                        <div class="card-content">
+                            <canvas id="carbonFootprintChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Consumo Energético -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>Consumo Energético</h3>
+                        </div>
+                        <div class="card-content">
+                            <canvas id="energyConsumptionChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Alertas y Notificaciones -->
+                    <div class="dashboard-card alerts-card">
+                        <div class="card-header">
+                            <h3>Alertas y Notificaciones</h3>
+                        </div>
+                        <div class="card-content">
+                            <div id="alertsList" class="alerts-list">
+                                <!-- Las alertas se cargarán dinámicamente -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vista de Edificios -->
+            <div id="buildingsView" class="view-content">
+                <div class="buildings-grid">
+                    <!-- Se cargará dinámicamente la lista de edificios -->
+                </div>
+            </div>
+
+            <!-- Vista de Reportes -->
+            <div id="reportsView" class="view-content">
+                <!-- Contenido de reportes -->
+            </div>
+
+            <!-- Vista de Configuración -->
+            <div id="settingsView" class="view-content">
+                <!-- Contenido de configuración -->
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/dashboard_empresarial.js') }}"></script>
+</body>
+</html> 

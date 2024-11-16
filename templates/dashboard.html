@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarbonXpert - Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://bernii.github.io/gauge.js/dist/gauge.min.js"></script>
+</head>
+<body class="dashboard-body">
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="CarbonXpert" class="logo">
+                <h2>CarbonXpert</h2>
+            </div>
+            
+            <div class="user-info">
+                <div class="user-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="user-details">
+                    <h3 id="userName">Cargando...</h3>
+                    <p id="userCity">Cargando...</p>
+                </div>
+            </div>
+
+            <ul class="nav-links">
+                <li class="active">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </li>
+                <li onclick="cerrarSesion()">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Cerrar Sesión</span>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <header class="main-header">
+                <h1>Dashboard de Consumo</h1>
+                <p id="fechaActual" class="fecha"></p>
+            </header>
+
+            <div class="dashboard-grid">
+                <!-- Columna 1 -->
+                <div class="grid-column">
+                    <!-- Huella de Carbono Total -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <i class="fas fa-leaf"></i>
+                            <h3>Huella de Carbono Total</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="metric-large">
+                                <span id="huellaTotalActual">Calculando...</span>
+                                <small>kg CO₂eq</small>
+                            </div>
+                            <div class="metric-change" id="variacionMensual">
+                                Calculando...
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gauge de Huella -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <h3>Nivel de Huella de Carbono</h3>
+                        </div>
+                        <div class="card-content gauge-container">
+                            <canvas id="gaugeHuella"></canvas>
+                            <div id="gaugeLabelHuella" class="gauge-label"></div>
+                        </div>
+                    </div>
+
+                    <!-- Alertas -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <h3>Alertas</h3>
+                        </div>
+                        <div class="card-content">
+                            <div id="listaAlertas" class="scroll-content"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna 2 -->
+                <div class="grid-column">
+                    <!-- Gráfico Huella de Carbono -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Evolución de Huella de Carbono</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="chart-container">
+                                <canvas id="graficoHuella"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Consumo Eléctrico -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <i class="fas fa-bolt"></i>
+                            <h3>Consumo Eléctrico</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="metric-info">
+                                <span id="consumoElectrico">Calculando...</span>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="graficoElectricidad"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recomendaciones -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <i class="fas fa-lightbulb"></i>
+                            <h3>Recomendaciones</h3>
+                        </div>
+                        <div class="card-content">
+                            <div id="listaRecomendaciones" class="scroll-content"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna 3 -->
+                <div class="grid-column">
+                    <!-- Consumo de Agua -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <i class="fas fa-tint"></i>
+                            <h3>Consumo de Agua</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="metric-info">
+                                <span id="consumoAgua">Calculando...</span>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="graficoAgua"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Consumo de Gas -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <i class="fas fa-fire"></i>
+                            <h3>Consumo de Gas</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="metric-info">
+                                <span id="consumoGas">Calculando...</span>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="graficoGas"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Resumen de Consumos -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <i class="fas fa-list-alt"></i>
+                            <h3>Resumen de Consumos</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="resumen-list">
+                                <div class="resumen-item">
+                                    <i class="fas fa-bolt"></i>
+                                    <span>Electricidad:</span>
+                                    <strong id="consumoElectricoResumen">Calculando...</strong>
+                                </div>
+                                <div class="resumen-item">
+                                    <i class="fas fa-tint"></i>
+                                    <span>Agua:</span>
+                                    <strong id="consumoAguaResumen">Calculando...</strong>
+                                </div>
+                                <div class="resumen-item">
+                                    <i class="fas fa-fire"></i>
+                                    <span>Gas:</span>
+                                    <strong id="consumoGasResumen">Calculando...</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html> 

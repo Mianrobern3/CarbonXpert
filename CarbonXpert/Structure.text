@@ -1,0 +1,19 @@
+carbonxpert/
+│
+├── static/
+│   ├── css/
+│   │   └── styles.css
+│   ├── js/
+│   │   ├── landing.js
+│   │   └── dashboard.js
+│   └── img/
+│       └── logo.png (opcional)
+│
+├── templates/
+│   ├── index.html
+│   └── dashboard.html
+│
+├── data/
+│   └── data.json
+│
+└── server.py

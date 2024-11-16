@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Residencial - CarbonXpert</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="form-page">
+    <nav class="navbar">
+        <div class="logo">
+            <a href="{{ url_for('index') }}">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="CarbonXpert">
+                <span>CarbonXpert</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="form-container">
+        <div class="form-card">
+            <h2>Registro Residencial</h2>
+            <p class="form-description">
+                Comienza a monitorear y reducir tu huella de carbono
+            </p>
+
+            <form id="registroForm" class="modern-form">
+                <div class="form-group">
+                    <label for="nombre">
+                        <i class="fas fa-user"></i>
+                        Nombre
+                    </label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">
+                        <i class="fas fa-envelope"></i>
+                        Email
+                    </label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="ciudad">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Ciudad
+                    </label>
+                    <select id="ciudad" name="ciudad" required>
+                        <option value="">Seleccione una ciudad</option>
+                    </select>
+                    <div id="infoClimatizacion" class="info-clima"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="vivienda">
+                        <i class="fas fa-home"></i>
+                        Tipo de Vivienda
+                    </label>
+                    <select id="vivienda" name="vivienda" required>
+                        <option value="">Seleccione tipo de vivienda</option>
+                        <option value="casa">Casa</option>
+                        <option value="apartamento">Apartamento</option>
+                    </select>
+                </div>
+
+                <div class="consumo-section">
+                    <h3>Consumo Mensual Promedio</h3>
+                    
+                    <div class="form-group">
+                        <label for="electricidad">
+                            <i class="fas fa-bolt"></i>
+                            Electricidad (kWh)
+                        </label>
+                        <input type="number" id="electricidad" name="electricidad" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="agua">
+                            <i class="fas fa-tint"></i>
+                            Agua (m³)
+                        </label>
+                        <input type="number" id="agua" name="agua" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gas">
+                            <i class="fas fa-fire"></i>
+                            Gas (m³)
+                        </label>
+                        <input type="number" id="gas" name="gas" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <span>Crear Cuenta</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/registro.js') }}"></script>
+</body>
+</html>

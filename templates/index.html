@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarbonXpert - Monitoreo Inteligente de Huella de Carbono</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="CarbonXpert">
+                <span>CarbonXpert</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#inicio" class="nav-link active">Inicio</a>
+                <a href="#productos" class="nav-link">Productos</a>
+                <a href="#acerca" class="nav-link">Acerca de</a>
+            </div>
+            <a href="{{ url_for('login_page') }}" class="login-btn">
+                <i class="fas fa-sign-in-alt"></i>
+                <span>Iniciar Sesión</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Monitorea y Reduce tu<br><span class="highlight">Huella de Carbono</span></h1>
+                <p class="hero-description">
+                    Únete a la revolución verde y toma el control de tu impacto ambiental con nuestra plataforma inteligente de monitoreo y gestión.
+                </p>
+                <div class="hero-buttons">
+                    <a href="{{ url_for('registro_residencial') }}" class="cta-button primary">
+                        <i class="fas fa-home"></i>
+                        Comenzar Ahora
+                    </a>
+                    <a href="#productos" class="cta-button secondary">
+                        <i class="fas fa-info-circle"></i>
+                        Conoce Más
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">10,000+</span>
+                            <span class="stat-label">Usuarios Activos</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Ton CO₂ Reducidas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="{{ url_for('static', filename='img/hero-image.png') }}" alt="Dashboard">
+                <div class="floating-card">
+                    <i class="fas fa-chart-line"></i>
+                    <span>-25% CO₂</span>
+                </div>
+                <div class="floating-card">
+                    <i class="fas fa-leaf"></i>
+                    <span>Eco-friendly</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="productos">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Nuestras Soluciones</h2>
+                <p>Elige la solución que mejor se adapte a tus necesidades</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Residencial</h3>
+                    <p>Monitorea y reduce tu huella de carbono personal</p>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Dashboard Personal</li>
+                        <li><i class="fas fa-check"></i> Recomendaciones Personalizadas</li>
+                        <li><i class="fas fa-check"></i> Reportes Mensuales</li>
+                    </ul>
+                    <a href="{{ url_for('registro_residencial') }}" class="product-cta">
+                        Comenzar Gratis
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="product-card featured">
+                    <div class="product-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Empresarial</h3>
+                    <p>Gestión avanzada para edificios y empresas</p>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Análisis Multi-edificio</li>
+                        <li><i class="fas fa-check"></i> Reportes Avanzados</li>
+                        <li><i class="fas fa-check"></i> API Integrada</li>
+                        <li><i class="fas fa-check"></i> Soporte 24/7</li>
+                    </ul>
+                    <a href="{{ url_for('registro_empresarial') }}" class="product-cta">
+                        Solicitar Demo
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="acerca">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Por Qué Elegirnos</h2>
+                <p>Tecnología de punta para un futuro sostenible</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Análisis en Tiempo Real</h3>
+                    <p>Monitoreo continuo de tu consumo energético y huella de carbono</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>IA Predictiva</h3>
+                    <p>Algoritmos inteligentes para optimizar tu consumo</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Seguridad Garantizada</h3>
+                    <p>Tus datos están protegidos con encriptación de nivel bancario</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="CarbonXpert">
+                    <span>CarbonXpert</span>
+                </div>
+                <p>Construyendo un futuro más sostenible</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Productos</h4>
+                    <a href="#">Residencial</a>
+                    <a href="#">Empresarial</a>
+                    <a href="#">API</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Compañía</h4>
+                    <a href="#">Acerca de</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Carreras</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <a href="#">Privacidad</a>
+                    <a href="#">Términos</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CarbonXpert. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html> 

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Personal - CarbonXpert</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard_personal.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="dashboard-body">
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="CarbonXpert" class="logo">
+                <h2>CarbonXpert</h2>
+            </div>
+            
+            <div class="user-info">
+                <div class="user-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="user-details">
+                    <h3 id="userName">Cargando...</h3>
+                    <p id="userLocation">Cargando...</p>
+                </div>
+            </div>
+
+            <ul class="nav-links">
+                <li class="active" data-view="dashboard">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </li>
+                <li data-view="consumo">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Consumo</span>
+                </li>
+                <li data-view="recomendaciones">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Recomendaciones</span>
+                </li>
+                <li data-view="configuracion">
+                    <i class="fas fa-cog"></i>
+                    <span>Configuración</span>
+                </li>
+                <li onclick="cerrarSesion()">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Cerrar Sesión</span>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <header class="main-header">
+                <div class="header-content">
+                    <h1>Mi Dashboard</h1>
+                    <p id="fechaActual" class="fecha"></p>
+                </div>
+                <div class="header-actions">
+                    <button class="action-btn" onclick="descargarReporte()">
+                        <i class="fas fa-download"></i>
+                        Descargar Reporte
+                    </button>
+                </div>
+            </header>
+
+            <!-- Vista Principal del Dashboard -->
+            <div id="dashboardView" class="view-content active">
+                <div class="dashboard-grid">
+                    <!-- Resumen de Huella de Carbono -->
+                    <div class="dashboard-card summary-card">
+                        <div class="card-header">
+                            <h3>Mi Huella de Carbono</h3>
+                            <select id="periodoSelector" onchange="actualizarDatos()">
+                                <option value="mes">Este Mes</option>
+                                <option value="trimestre">Este Trimestre</option>
+                                <option value="año">Este Año</option>
+                            </select>
+                        </div>
+                        <div class="card-content">
+                            <div class="carbon-gauge" id="carbonGauge"></div>
+                            <div class="carbon-stats">
+                                <div class="stat-item">
+                                    <span class="stat-value" id="totalCarbon">0</span>
+                                    <span class="stat-label">Ton CO₂eq</span>
+                                </div>
+                                <div class="stat-comparison">
+                                    <span id="comparisonText">vs. promedio de tu zona</span>
+                                    <span id="comparisonValue" class="better">-15%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Consumo por Categoría -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>Consumo por Categoría</h3>
+                        </div>
+                        <div class="card-content">
+                            <canvas id="consumoChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Histórico de Consumo -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>Histórico de Consumo</h3>
+                        </div>
+                        <div class="card-content">
+                            <canvas id="historicoChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Recomendaciones -->
+                    <div class="dashboard-card recommendations-card">
+                        <div class="card-header">
+                            <h3>Recomendaciones Personalizadas</h3>
+                        </div>
+                        <div class="card-content">
+                            <div id="recommendationsList" class="recommendations-list">
+                                <!-- Las recomendaciones se cargarán dinámicamente -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Otras vistas se mostrarán/ocultarán según la navegación -->
+            <div id="consumoView" class="view-content">
+                <!-- Contenido de la vista de consumo -->
+            </div>
+
+            <div id="recomendacionesView" class="view-content">
+                <!-- Contenido de la vista de recomendaciones -->
+            </div>
+
+            <div id="configuracionView" class="view-content">
+                <!-- Contenido de la vista de configuración -->
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/dashboard_personal.js') }}"></script>
+</body>
+</html> 

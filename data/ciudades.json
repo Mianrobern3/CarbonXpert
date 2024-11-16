@@ -1,0 +1,59 @@
+{
+  "ciudades": [
+    {
+      "nombre": "Bogotá",
+      "departamento": "Cundinamarca",
+      "clima": {
+        "temperatura_promedio": 14,
+        "factor_consumo": 1.0,
+        "calefaccion": true,
+        "aire_acondicionado": false,
+        "humedad_promedio": 80
+      }
+    },
+    {
+      "nombre": "Medellín",
+      "departamento": "Antioquia",
+      "clima": {
+        "temperatura_promedio": 22,
+        "factor_consumo": 1.1,
+        "calefaccion": false,
+        "aire_acondicionado": true,
+        "humedad_promedio": 70
+      }
+    },
+    {
+      "nombre": "Cali",
+      "departamento": "Valle del Cauca",
+      "clima": {
+        "temperatura_promedio": 25,
+        "factor_consumo": 1.2,
+        "calefaccion": false,
+        "aire_acondicionado": true,
+        "humedad_promedio": 65
+      }
+    },
+    {
+      "nombre": "Barranquilla",
+      "departamento": "Atlántico",
+      "clima": {
+        "temperatura_promedio": 28,
+        "factor_consumo": 1.3,
+        "calefaccion": false,
+        "aire_acondicionado": true,
+        "humedad_promedio": 80
+      }
+    },
+    {
+      "nombre": "Cartagena",
+      "departamento": "Bolívar",
+      "clima": {
+        "temperatura_promedio": 28,
+        "factor_consumo": 1.3,
+        "calefaccion": false,
+        "aire_acondicionado": true,
+        "humedad_promedio": 85
+      }
+    }
+  ]
+} 
