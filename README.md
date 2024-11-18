@@ -78,9 +78,9 @@ Este proyecto está licenciado bajo la [MIT License](LICENSE).
 ## 📫 **Contáctanos**  
 
 - **Equipo de desarrollo:**  
-  - Miguel Ángel Rodríguez: [mrodriguez.angel@fuac.edu.co](mailto:mrodriguez.angel@fuac.edu.co)  
-  - Amarilo S.A.S.  
-- Visítanos en: [CarbonXpert](https://github.com/tu-repo)  
+  - Miguel Ángel Rodríguez: [mrobern@mit.edu](mailto:mrodriguez.angel@fuac.edu.co)  
+  - Natalia Ramírez: [0nataramirez0@gmail.com](mailto:0nataramirez0@gmail.com)  
+- Visítanos en: [CarbonXpert](https://github.com/Mianrobern3/CarbonXpert)  
 
 ---
 
