@@ -113,11 +113,13 @@
 .header-content h1 {
     margin: 0;
     color: var(--dark-color);
+    padding-left: 30px;
 }
 
 .fecha {
     color: var(--text-light);
-    margin-top: 0.5rem;
+    margin-top: 1rem;
+    padding-left: 30px;
 }
 
 .action-btn {
@@ -143,7 +145,7 @@
 .dashboard-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 3rem;
 }
 
 .dashboard-card {

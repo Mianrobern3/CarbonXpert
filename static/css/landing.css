@@ -14,7 +14,7 @@
 /* Reset y Estilos Generales */
 * {
     margin: 0;
-    padding: 0;
+    padding: 5px;
     box-sizing: border-box;
 }
 
@@ -142,6 +142,8 @@ body {
     line-height: 1.2;
     margin-bottom: 1.5rem;
     color: var(--dark-color);
+    width: 1500px;
+    height: 120px;
 }
 
 .highlight {
@@ -545,4 +547,5 @@ body {
     .hero-image {
         min-height: 250px;
     }
-} 
+}
+
